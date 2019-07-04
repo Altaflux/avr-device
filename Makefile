@@ -40,7 +40,7 @@ src/devices/%/mod.rs: src/devices/%/mod.full.rs
 	@RUST_LOG=WARN form -i $< -o $(@D) >/dev/null
 	@rm $<
 	@mv $(@D)/lib.rs $@
-	@RUSTUP_TOOLCHAIN=nightly rustfmt $@
+	@rustfmt $@
 	@# Remove the `extern crate` lines
 	@sed -i'' -e "1,7d" $@
 	@# Remove DEVICE_PERIPHERALS declaration and replace it with a reference
