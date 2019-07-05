@@ -4,3 +4,7 @@ _include:
   - "common/twi.yaml"
   - "common/usart.yaml"
   - "common/wdt.yaml"
+ADC:
+  _modify:
+    ADCSRA:
+      access: read-write
