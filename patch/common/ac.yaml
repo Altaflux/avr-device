@@ -8,6 +8,8 @@ AC:
   _modify:
     ACSR:
       access: read-write
+    ADCSRA:
+      access: read-write
   ACSR:
     _modify:
       ACIS:
